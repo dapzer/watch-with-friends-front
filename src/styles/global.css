@@ -49,3 +49,7 @@ html {
   border-radius: 8px;
   @apply bg-zinc-700
 }
+
+span {
+  display: block;
+}

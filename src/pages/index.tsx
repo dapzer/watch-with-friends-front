@@ -1,6 +1,5 @@
 import Head from "next/head";
 import { Typography } from "@/shared/ui/Typography";
-import Link from "next/link";
 
 export default function Home() {
   return (
@@ -8,11 +7,24 @@ export default function Home() {
       <Head>
         <title>Watch With Friends</title>
       </Head>
-      <div className="container w-full py-11">
-        <div className="w-full bg-amber-200 py-11"></div>
-        <Typography as="h1">Heading</Typography>
-        <Typography as={Link} href={"/"}>
-          Link
+      <div className="container w-full">
+        <Typography as="h1" variant="title">
+          Heading
+        </Typography>
+        <Typography as="h2" variant="title2">
+          Heading
+        </Typography>
+        <Typography as="h3" variant="title3">
+          Heading
+        </Typography>
+        <Typography as="h4" variant="title4">
+          Heading
+        </Typography>
+        <Typography as="a" variant="link">
+          Heading
+        </Typography>
+        <Typography as="span" variant="textSmall">
+          Heading
         </Typography>
       </div>
     </>
