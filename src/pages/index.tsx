@@ -1,6 +1,7 @@
 import Head from "next/head";
 import { Typography } from "@/shared/ui/Typography";
 import { Input } from "@/shared/ui/Input";
+import { Button } from "@/shared/ui/Button";
 
 export default function Home() {
   return (
@@ -29,6 +30,8 @@ export default function Home() {
         </Typography>
 
         <Input placeholder={"Password"} error={"Error"} type={"text"} label="Your password" />
+        <Button>Click me</Button>
+        <Button disabled={true}>Click me</Button>
       </div>
     </>
   );
