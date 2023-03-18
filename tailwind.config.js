@@ -4,10 +4,10 @@ module.exports = {
   theme: {
     extend: {
       fontSize: {
-        "45xl": "2.5rem",
-        "35xl": "2rem",
+        "4.5xl": "2.5rem",
+        "3.5xl": "2rem",
         "1sm": "0.8rem",
-        "125sm": "1.25rem",
+        "1.25sm": "1.25rem",
         default: "1rem",
       },
     },
