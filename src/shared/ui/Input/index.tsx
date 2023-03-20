@@ -4,12 +4,11 @@ import { Typography } from "@/shared/ui/Typography";
 
 interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   label?: string;
-  customClass?: string;
   error?: string;
 }
 
 export const Input: FC<InputProps> = React.forwardRef(function Input(props, ref: React.ForwardedRef<HTMLInputElement>) {
-  const { customClass, label, error, ...rest } = props;
+  const { className, label, error, ...rest } = props;
 
   return (
     <div className="flex flex-col gap-1.5">
@@ -19,7 +18,7 @@ export const Input: FC<InputProps> = React.forwardRef(function Input(props, ref:
         </Typography>
         <input
           className={clsx("rounded-xl border bg-transparent px-3 py-1 text-1.25sm text-white outline-0", {
-            [customClass as string]: customClass,
+            [className as string]: className,
           })}
           ref={ref}
           {...rest}

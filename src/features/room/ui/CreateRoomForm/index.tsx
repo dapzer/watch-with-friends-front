@@ -48,7 +48,7 @@ export const CreateRoomForm: FC<CreateRoomFormProps> = (props) => {
         required
       />
 
-      <Button type="submit" customClass="mt-2">
+      <Button type="submit" className="mt-2">
         Создать комнату
       </Button>
     </form>
