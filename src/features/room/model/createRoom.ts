@@ -1,14 +1,13 @@
-import { fetcher, generateApiUrl } from "@/shared/lib/utils";
+import { fetcher } from "@/shared/lib/utils";
+import { getRoomsApiUrl } from "@/entities/room";
 
 export interface RoomForm {
   id: number;
   roomName: string;
 }
 
-const roomsApiUrl = generateApiUrl(`${process.env.NEXT_PUBLIC_API_URL}/rooms`);
-
 export const createRoomApi = async (form: RoomForm) => {
-  return await fetcher(roomsApiUrl(""), {
+  return await fetcher(getRoomsApiUrl(""), {
     method: "POST",
     headers: {
       "Content-Type": "application/json",

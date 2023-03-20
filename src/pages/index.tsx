@@ -1,17 +1,29 @@
 import Head from "next/head";
-import { Typography } from "@/shared/ui/Typography";
-import { Input } from "@/shared/ui/Input";
-import { Button } from "@/shared/ui/Button";
 import { CreateRoomForm } from "@/features/room";
+import { useEffect, useState } from "react";
+import { getAllRoomsApi, RoomList, RoomType } from "@/entities/room";
 
 export default function Home() {
+  const [rooms, setRooms] = useState<RoomType[] | null>();
+
+  const getRooms = () => {
+    getAllRoomsApi().then((res) => setRooms(res));
+  };
+
+  useEffect(() => {
+    getRooms();
+  }, []);
+
   return (
     <>
       <Head>
         <title>Watch With Friends</title>
       </Head>
       <div className="container w-full">
-        <CreateRoomForm />
+        <div className="flex gap-5 py-5">
+          <CreateRoomForm />
+          <RoomList rooms={rooms} />
+        </div>
       </div>
     </>
   );

@@ -30,7 +30,7 @@ export const CreateRoomForm: FC<CreateRoomFormProps> = (props) => {
   };
 
   return (
-    <form className="flex w-fit flex-col gap-3 p-4 shadow-3xl shadow" onSubmit={handleSubmit(createRoomHandler)}>
+    <form className="flex h-fit w-fit flex-col gap-3 p-4 shadow-3xl shadow" onSubmit={handleSubmit(createRoomHandler)}>
       <Input
         {...register("id", { pattern: /^[0-9]/ })}
         placeholder="Введите идентификатор комнаты"
