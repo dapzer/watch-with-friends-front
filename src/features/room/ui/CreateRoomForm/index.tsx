@@ -5,10 +5,12 @@ import { SubmitHandler, useForm } from "react-hook-form";
 import { createRoomApi, RoomForm } from "@/features/room";
 import { toast } from "react-toastify";
 
-interface CreateRoomFormProps {}
+interface CreateRoomFormProps {
+  onSuccessCreateHandler: () => void;
+}
 
 export const CreateRoomForm: FC<CreateRoomFormProps> = (props) => {
-  const {} = props;
+  const { onSuccessCreateHandler } = props;
   const {
     register,
     reset,
@@ -22,6 +24,7 @@ export const CreateRoomForm: FC<CreateRoomFormProps> = (props) => {
       .then(() => {
         reset();
         toast.success("Комната успешна создана!");
+        onSuccessCreateHandler();
       })
       .catch((reason) => {
         setError("id", { message: reason });

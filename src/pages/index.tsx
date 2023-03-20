@@ -19,9 +19,10 @@ export default function Home() {
       <Head>
         <title>Watch With Friends</title>
       </Head>
+
       <div className="container w-full">
         <div className="flex gap-5 py-5">
-          <CreateRoomForm />
+          <CreateRoomForm onSuccessCreateHandler={getRooms} />
           <RoomList rooms={rooms} />
         </div>
       </div>
