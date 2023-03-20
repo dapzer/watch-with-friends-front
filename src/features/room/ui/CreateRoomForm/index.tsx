@@ -4,6 +4,7 @@ import { Button } from "@/shared/ui/Button";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { createRoomApi, RoomForm } from "@/features/room";
 import { toast } from "react-toastify";
+import { FormErrorType } from "@/shared/types";
 
 interface CreateRoomFormProps {
   onSuccessCreateHandler: () => void;
@@ -26,9 +27,9 @@ export const CreateRoomForm: FC<CreateRoomFormProps> = (props) => {
         toast.success("Комната успешна создана!");
         onSuccessCreateHandler();
       })
-      .catch((reason) => {
-        setError("id", { message: reason });
-        toast.error(reason);
+      .catch((reason: FormErrorType) => {
+        setError(reason.field as "id" | "roomName", { message: reason.message });
+        toast.error(reason.message);
       });
   };
 
