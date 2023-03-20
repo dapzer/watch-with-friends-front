@@ -2,6 +2,7 @@ import Head from "next/head";
 import { Typography } from "@/shared/ui/Typography";
 import { Input } from "@/shared/ui/Input";
 import { Button } from "@/shared/ui/Button";
+import { CreateRoomForm } from "@/features/room";
 
 export default function Home() {
   return (
@@ -10,28 +11,7 @@ export default function Home() {
         <title>Watch With Friends</title>
       </Head>
       <div className="container w-full">
-        <Typography as="h1" variant="title">
-          Heading
-        </Typography>
-        <Typography as="h2" variant="title2">
-          Heading
-        </Typography>
-        <Typography as="h3" variant="title3">
-          Heading
-        </Typography>
-        <Typography as="h4" variant="title4">
-          Heading
-        </Typography>
-        <Typography as="a" variant="link">
-          Heading
-        </Typography>
-        <Typography as="span" variant="text">
-          Heading
-        </Typography>
-
-        <Input placeholder={"Password"} error={"Error"} type={"text"} label="Your password" />
-        <Button>Click me</Button>
-        <Button disabled={true}>Click me</Button>
+        <CreateRoomForm />
       </div>
     </>
   );

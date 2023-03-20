@@ -8,6 +8,6 @@ export const fetcher = async <T = unknown>(url: string, body?: RequestInit, cust
     return data;
   } else {
     toast.warning((customMessage || "An error occurred while getting data. ") + `Code: ${data.code}`);
-    return null;
+    throw data.message;
   }
 };

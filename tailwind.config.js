@@ -3,6 +3,9 @@ module.exports = {
   content: ["./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      boxShadow: {
+        "3xl": "0 0 20px rgba(0,0,0,.4)",
+      },
       fontSize: {
         "4.5xl": "2.5rem",
         "3.5xl": "2rem",
