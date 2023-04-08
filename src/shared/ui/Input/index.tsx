@@ -12,10 +12,13 @@ export const Input: FC<InputProps> = React.forwardRef(function Input(props, ref:
 
   return (
     <div className="flex flex-col gap-1.5">
-      <label>
-        <Typography className="pb-1" as="p" variant="text">
-          {label}
-        </Typography>
+      <label className="flex flex-col">
+        {label && (
+          <Typography className="pb-1" as="p" variant="text">
+            {label}
+          </Typography>
+        )}
+
         <input
           className={clsx("rounded-xl border bg-transparent px-3 py-1 text-1.25sm text-white outline-0", {
             [className as string]: className,
