@@ -1,9 +1,10 @@
 import type { AppProps } from "next/app";
 import Head from "next/head";
-import { Layout } from "@/components/Layout";
+import { Layout } from "@/shared/ui/Layout/ui/Layout";
 import { ToastContainer } from "react-toastify";
 import "@/styles/global.css";
 import "react-toastify/dist/ReactToastify.css";
+import { Header } from "@/shared/ui/Layout/ui/Header";
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
