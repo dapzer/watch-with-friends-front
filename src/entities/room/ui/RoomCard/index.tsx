@@ -11,12 +11,12 @@ export const RoomCard: FC<RoomCardProps> = (props) => {
   const { room } = props;
 
   return (
-    <div className="flex w-full max-w-[500px] flex-col gap-3 p-6 shadow-3xl shadow">
+    <div className="flex w-full max-w-[530px] flex-col gap-3 p-6 shadow-3xl shadow">
       <ul>
         <li>
           <Typography variant="text">
             Название комнаты:{" "}
-            <Typography variant="text" className="!font-bold">
+            <Typography as="span" variant="text" className="!font-bold">
               {room.roomName}
             </Typography>
           </Typography>
@@ -24,7 +24,7 @@ export const RoomCard: FC<RoomCardProps> = (props) => {
         <li>
           <Typography variant="text">
             Идентификатор комнаты:{" "}
-            <Typography variant="text" className="!font-bold">
+            <Typography as="span" variant="text" className="!font-bold">
               {room.id}
             </Typography>
           </Typography>

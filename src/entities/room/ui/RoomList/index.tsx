@@ -8,7 +8,7 @@ interface RoomListProps {
 export const RoomList: FC<RoomListProps> = (props) => {
   const { rooms } = props;
   return (
-    <div className="flex flex-wrap justify-around gap-5">
+    <div className="flex w-full flex-wrap justify-between gap-5">
       {rooms?.map((el) => (
         <RoomCard key={el.id} room={el} />
       ))}
